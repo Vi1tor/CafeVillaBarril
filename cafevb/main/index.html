@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café da Manhã Villa Barril</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/cafevb/css/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <div class="header-container">
+                <img src="/cafevb/img/logo.webp" alt="Logo" class="logo">
+                <i class="bi bi-cup-hot"></i>
+            </div>
+            <i class="fas fa-coffee"></i> Pedido de Café da Manhã Villa Barril
+        </h1>
+
+        <form id="breakfastForm" class="tab active">
+            <div class="grid-container">
+                <div class="form-group">
+                    <label for="barrelNumber" class="required-field">Número do Barril</label>
+                    <input type="text" id="barrelNumber" required placeholder="Ex: 1-12">
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerName" class="required-field">Seu Nome</label>
+                    <input type="text" id="customerName" required placeholder="Seu nome completo">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="deliveryTime" class="required-field">Horário de Entrega</label>
+                <input type="text" id="deliveryTime" required placeholder="Ex: 08h30 início 8:00 , horário final 10:00">
+            </div>
+            
+            <h2><i class="fas fa-utensils"></i> Itens do Café da Manhã Villa Barril</h2>
+            <p>Selecione 1 para 1 pessoa / 2 para 2 pessoas!</p>
+            
+            <table id="itemsTable">
+                <thead>
+                    <tr>
+                        <th>Item para uma ou duas pessoas</th>
+                        <th>0</th>
+                        <th>1</th>
+                        <th>2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <div id="itemCount">
+                <p>Total de itens selecionados: <span id="totalCount">0</span></p>
+            </div>
+            
+            <div class="form-group">
+                <label for="observations"><i class="fas fa-comment-alt"></i> Observações</label>
+                <textarea id="observations" rows="3" placeholder="Ex: Sem glúten, sem lactose..."></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn"><i class="fab fa-whatsapp"></i> Enviar Pedido</button>
+
+            <div id="whatsappLink" style="display: none;">
+                <p><i class="fas fa-check-circle"></i> Seu pedido está pronto para ser enviado!</p>
+                <a id="whatsappButton" href="#" target="_blank"><i class="fab fa-whatsapp"></i> Abrir no WhatsApp</a>
+                <p>Se o botão não funcionar, copie a mensagem abaixo e envie manualmente:</p>
+                <textarea id="generatedMessage" readonly></textarea>
+                <button class="copy-btn" id="copyBtn"><i class="fas fa-copy"></i> Copiar Mensagem</button>
+                <p class="success-message" id="copySuccess" style="display: none;"><i class="fas fa-check"></i> Mensagem copiada!</p>
+            </div>
+        </form>
+    </div>
+    <script src="/cafevb/js/script.js"></script>
+    <footer>
+        <p>&copy; 2025 Villa Barril. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
